@@ -1,0 +1,28 @@
+<div class="text-center mb-5">
+  <h1>Welcome to Succor India</h1>
+  <p class="lead">
+    Explore our work in home interiors, roof transformations, and construction
+    excellence.
+  </p>
+</div>
+
+<div class="row">
+  <% categories.forEach(category => { %>
+  <div class="col d-flex">
+    <div class="card h-100 w-100">
+      <img
+        src="<%= category.image %>"
+        class="card-img-top"
+        alt="<%= category.title %>"
+      />
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title"><%= category.title %></h5>
+        <p class="card-text flex-grow-1"><%= category.description %></p>
+        <a href="/projects/<%= category.slug %>" class="btn btn-primary mt-auto"
+          >View Projects</a
+        >
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
